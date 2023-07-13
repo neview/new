@@ -31,9 +31,9 @@ const switchTheme = () => {
     </div>
   </header> -->
   <n-config-provider :theme="darkTheme2">
-    <n-card>
+    <n-card :bordered="false">
       <RouterView />
-      <n-button class="suspend" @click="switchTheme">切换主题</n-button>
+      <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->
     </n-card>
   </n-config-provider>
 </template>

@@ -36,6 +36,14 @@
   --section-gap: 160px;
   --gradients-gradient-blue: rgba(51, 94, 247, 1);
 }
+:root {
+  --qny-background-color-light: rgba(250, 250, 250, 1);
+  --qny-background-color-dark: #ffffff;
+  --qny-background-color: var(--qny-background-color-light);
+  --qny-color-light: rgba(158, 158, 158, 1);
+  --qny-color-dark: rgba(33, 33, 33, 1);
+  --qny-color: var(--qny-color-light);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

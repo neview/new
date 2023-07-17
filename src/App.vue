@@ -9,6 +9,29 @@ import {
   NCarousel,
 } from "naive-ui";
 
+/**
+ * js 文件下使用这个做类型提示
+ * @type import('naive-ui').GlobalThemeOverrides
+ */
+const themeOverrides = {
+  common: {
+    primaryColor: "#335EF7",
+  },
+  // Button: {
+  //   textColor: "#FF0000",
+  // },
+  // Select: {
+  //   peers: {
+  //     InternalSelection: {
+  //       textColor: "#FF0000",
+  //     },
+  //   },
+  // },
+  // Radio: {
+  //   textColor: "RGBA(27,124,222)",
+  // },
+};
+
 let darkTheme2 = ref("");
 const switchTheme = () => {
   darkTheme2.value == ""
@@ -30,7 +53,7 @@ const switchTheme = () => {
       </nav>
     </div>
   </header> -->
-  <n-config-provider :theme="darkTheme2">
+  <n-config-provider :theme="darkTheme2" :theme-overrides="themeOverrides">
     <n-card :bordered="false">
       <RouterView />
       <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->

@@ -76,6 +76,7 @@ let currentIndex = ref(0);
 .carousel {
   width: 100%;
   height: 81vh;
+  padding: 0.2rem 0.1rem;
 }
 // .carousel-img {
 //   width: 100%;
@@ -120,7 +121,7 @@ let currentIndex = ref(0);
   padding: 0;
   position: absolute;
   bottom: 0;
-  left: calc(50vw - 0.47rem);
+  left: calc(50vw - 0.3rem);
 }
 
 .custom-dots li {

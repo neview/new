@@ -54,10 +54,10 @@ const switchTheme = () => {
     </div>
   </header> -->
   <n-config-provider :theme="darkTheme2" :theme-overrides="themeOverrides">
-    <n-card :bordered="false">
-      <RouterView />
-      <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->
-    </n-card>
+    <!-- <n-card :bordered="false"> -->
+    <RouterView />
+    <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->
+    <!-- </n-card> -->
   </n-config-provider>
 </template>
 

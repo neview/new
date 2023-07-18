@@ -1,33 +1,38 @@
 <template>
-  <div class="carousel">
-    <img src="@/assets/svg/logo.svg" alt="" class="address-img" />
-    <div class="text-tips">Login to Your Account</div>
-  </div>
-  <div class="authorized">
-    <img src="@/assets/svg/email.svg" alt="" />
-    <input type="text" placeholder="email" />
-  </div>
-  <div class="authorized">
-    <img src="@/assets/svg/password.svg" alt="" />
-    <input :type="inputType" placeholder="password" />
-    <img src="@/assets/svg/passHide.svg" alt="" @click="password" />
-  </div>
-  <div class="protocol">
-    <n-checkbox v-model:checked="disabled2"> Remember me </n-checkbox>
-  </div>
-  <div class="next-button">
-    <n-button
-      type="info"
-      round
-      style="width: 3rem; height: 0.45rem"
-      @click="LoginButt"
-      >Next</n-button
-    >
+  <div style="padding: 0.2rem 0.1rem">
+    <div class="carousel">
+      <img src="@/assets/svg/logo.svg" alt="" class="address-img" />
+      <div class="text-tips">Login to Your Account</div>
+    </div>
+    <div class="authorized">
+      <img src="@/assets/svg/email.svg" alt="" />
+      <input type="text" placeholder="email" />
+    </div>
+    <div class="authorized">
+      <img src="@/assets/svg/password.svg" alt="" />
+      <input :type="inputType" placeholder="password" />
+      <img src="@/assets/svg/passHide.svg" alt="" @click="password" />
+    </div>
+    <div class="protocol">
+      <n-checkbox v-model:checked="disabled2"> Remember me </n-checkbox>
+    </div>
+    <div class="next-button">
+      <n-button
+        type="info"
+        round
+        style="width: 3rem; height: 0.45rem"
+        @click="LoginButt"
+        >Next</n-button
+      >
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
 import { NButton, NInput, NCheckbox } from "naive-ui";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 let inputType = ref("text");
 let disabled2 = ref(false);
 const password = () => {
@@ -36,7 +41,9 @@ const password = () => {
     : (inputType.value = "text");
 };
 
-const LoginButt = () => {};
+const LoginButt = () => {
+  router.push("/");
+};
 // const switchColor = () => {
 //   let dom = document.documentElement;
 //   dom.style.setProperty(

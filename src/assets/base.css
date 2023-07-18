@@ -43,6 +43,12 @@
   --qny-color-light: rgba(158, 158, 158, 1);
   --qny-color-dark: rgba(33, 33, 33, 1);
   --qny-color: var(--qny-color-light);
+  --qny-index-background-color-light: #757575;
+  --qny-index-color-light: #757575;
+  --qny-index-color2-light: #212121;
+  --qny-index-background-color2-light: #ff981f;
+  --qny-index-background-color3-light: rgba(241, 233, 233, 0.1);
+  --qny-index-background-color4-light: rgba(241, 233, 233, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {

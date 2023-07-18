@@ -42,8 +42,71 @@
     <div class="node-switch">
       <div class="wave1">
         <div class="wave2">
-          <div class="progress"></div>
+          <div class="progress">
+            <!-- <img src="@/assets/svg/progress.svg" alt="" /> -->
+            <div class="switch-butt" @click="openSwitch">
+              <img src="@/assets/svg/switch.svg" alt="" />
+              <span>Connecting ...</span>
+              <span>180.179.194.63</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="internet-speed">
+        <n-button
+          :bordered="false"
+          round
+          color="rgba(246, 248, 251, 0.20)"
+          size="large"
+          tag="div"
+          :focusable="false"
+        >
+          <template #icon>
+            <n-icon>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.0066 13.165L12.3607 13.1634C13.7652 13.1513 15.0183 13.0666 15.8124 12.9206C15.8267 12.9206 16.6143 12.7613 16.8764 12.6599C17.2554 12.5006 17.577 12.2126 17.7808 11.8515C17.9262 11.5624 18 11.2592 18 10.9417C17.9884 10.6922 17.8629 10.2806 17.7576 9.98692L17.664 9.74283C17.0218 8.12612 14.9234 5.03561 13.6402 3.85199L13.5505 3.76473L13.1302 3.37527C12.8085 3.12982 12.4153 3 11.9923 3C11.6134 3 11.2344 3.11563 10.9282 3.3469C10.829 3.41614 10.7017 3.52766 10.5942 3.62693L10.1974 4.006C8.87572 5.31046 7.02183 8.13485 6.40756 9.59883C6.39435 9.59883 6.01432 10.5086 6 10.9417V10.9995C6 11.6639 6.37892 12.2846 6.99137 12.6021C7.1588 12.6888 7.48678 12.772 7.77483 12.8352L8.31871 12.949C9.19332 13.0788 10.535 13.165 12.0066 13.165ZM10.4817 19.4967C10.4817 20.3269 11.1613 21 11.9996 21C12.8378 21 13.5175 20.3269 13.5175 19.4967L13.1903 15.7975C13.1903 15.1463 12.6583 14.6183 11.9996 14.6183C11.3419 14.6183 10.8088 15.1463 10.8088 15.7975L10.4817 19.4967Z"
+                  fill="white"
+                />
+              </svg>
+            </n-icon>
+          </template>
+          0 KB/s
+        </n-button>
+        <n-button
+          :bordered="false"
+          round
+          color="rgba(246, 248, 251, 0.20)"
+          size="large"
+        >
+          <template #icon>
+            <n-icon>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.4825 4.50325L10.8097 8.20248C10.8097 8.85375 11.3417 9.38174 12.0004 9.38174C12.6581 9.38174 13.1912 8.85375 13.1912 8.20248L13.5183 4.50325C13.5183 3.67308 12.8387 3 12.0004 3C11.1622 3 10.4825 3.67308 10.4825 4.50325ZM10.7501 20.5141C10.8064 20.5653 10.8495 20.6046 10.8698 20.6247C11.1915 20.8702 11.5847 21 12.0077 21C12.3866 21 12.7656 20.8844 13.0718 20.6531C13.2844 20.5047 13.6258 20.1622 13.6258 20.1622C14.9532 18.9491 16.9502 15.9317 17.5924 14.4012C17.6057 14.4012 17.9857 13.4914 18 13.0583V13.0005C18 12.3361 17.6211 11.7154 17.0086 11.3979C16.7554 11.2668 16.1349 11.1437 15.8408 11.0854C15.746 11.0666 15.6851 11.0545 15.6813 11.051C14.8067 10.9212 13.465 10.835 11.9934 10.835C10.4469 10.835 9.04792 10.9212 8.18763 11.0794C8.17331 11.0794 7.38572 11.2387 7.12355 11.3401C6.74463 11.4994 6.42299 11.7874 6.2192 12.1485C6.0738 12.4376 6 12.7408 6 13.0583C6.01542 13.391 6.23352 14.0117 6.33596 14.2572C6.97815 15.8739 9.07656 18.9644 10.3598 20.148C10.4934 20.2803 10.6448 20.4181 10.7501 20.5141Z"
+                  fill="white"
+                />
+              </svg>
+            </n-icon>
+          </template>
+          0 KB/s
+        </n-button>
       </div>
     </div>
   </div>
@@ -51,6 +114,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { NButton, NIcon } from "naive-ui";
+const openSwitch = () => {};
 </script>
 <style lang="scss" scoped>
 .page-header {
@@ -102,7 +166,7 @@ import { NButton, NIcon } from "naive-ui";
   }
   .node-butt {
     text-align: center;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
   }
   .node-name {
     text-align: center;
@@ -124,7 +188,6 @@ import { NButton, NIcon } from "naive-ui";
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     .wave1 {
       width: 3rem;
       height: 3rem;
@@ -135,6 +198,7 @@ import { NButton, NIcon } from "naive-ui";
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 1.3rem;
       .wave2 {
         width: 2.6rem;
         height: 2.6rem;
@@ -146,8 +210,46 @@ import { NButton, NIcon } from "naive-ui";
         align-items: center;
         justify-content: center;
         .progress {
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          background-color: #ffffff;
+          box-shadow: 0px 0.12rem 0.12rem 0px rgba(218, 222, 227, 0.5) inset;
+          background-image: url("../assets/svg/progress.svg");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          .switch-butt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+              margin-top: 0.4rem;
+            }
+            span:nth-child(2) {
+              font-family: Urbanist;
+              font-size: 0.16rem;
+              font-style: normal;
+              font-weight: 700;
+              color: #ff981f;
+              margin-top: 0.1rem;
+            }
+            span:nth-child(3) {
+              font-family: Urbanist;
+              font-size: 0.14rem;
+              font-style: normal;
+              font-weight: 500;
+              color: #424242;
+              margin-top: 0.05rem;
+            }
+          }
         }
       }
+    }
+    .internet-speed {
+      width: 50vw;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.4rem;
     }
   }
   >>> .n-base-selection-label {

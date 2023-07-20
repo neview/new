@@ -307,8 +307,8 @@ const openSwitch = () => {};
       margin-top: 0.2rem;
     }
   }
-  >>> .n-base-selection-label {
-    border-radius: 0.2rem !important;
-  }
+  // >>> .n-base-selection-label {
+  //   border-radius: 0.2rem !important;
+  // }
 }
 </style>

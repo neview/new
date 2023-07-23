@@ -8,6 +8,7 @@ import {
   darkTheme,
   NCarousel,
 } from "naive-ui";
+import BottomTabbar from "./views/components/BottomTabbar.vue";
 
 /**
  * js 文件下使用这个做类型提示
@@ -17,19 +18,6 @@ const themeOverrides = {
   common: {
     primaryColor: "#335EF7",
   },
-  // Button: {
-  //   textColor: "#FF0000",
-  // },
-  // Select: {
-  //   peers: {
-  //     InternalSelection: {
-  //       textColor: "#FF0000",
-  //     },
-  //   },
-  // },
-  // Radio: {
-  //   textColor: "RGBA(27,124,222)",
-  // },
 };
 
 let darkTheme2 = ref("");
@@ -41,23 +29,14 @@ const switchTheme = () => {
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
   <n-config-provider :theme="darkTheme2" :theme-overrides="themeOverrides">
     <!-- <n-card :bordered="false"> -->
     <RouterView />
     <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->
     <!-- </n-card> -->
+    <div style="position: fixed;bottom: 0;left: 0;width: 100%;">
+      <BottomTabbar></BottomTabbar>
+    </div>
   </n-config-provider>
 </template>
 

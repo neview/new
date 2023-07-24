@@ -43,6 +43,26 @@ const router = createRouter({
       path: '/language',
       name: 'Language',
       component: () => import('../views/Language.vue')
+    },
+    {
+      path: '/help',
+      name: 'Help',
+      component: () => import('../views/Help.vue')
+    },
+    {
+      path: '/buy',
+      name: 'Buy',
+      component: () => import('../views/Buy.vue')
+    },
+    {
+      path: '/email',
+      name: 'Email',
+      component: () => import('../views/Email.vue')
+    },
+    {
+      path: '/edit',
+      name: 'Edit',
+      component: () => import('../views/Edit.vue')
     }
   ]
 })

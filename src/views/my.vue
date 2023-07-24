@@ -45,7 +45,7 @@
       </div>
       <img class="permiss-arrow" src="@/assets/svg/my/arrow.svg" alt="" />
     </div>
-    <div class="permiss-list">
+    <div class="permiss-list" @click="nextPage(1)">
       <div class="permiss-img">
         <img src="@/assets/svg/my/language.svg" alt="" />
         Language
@@ -86,7 +86,7 @@
       </div>
       <img class="permiss-arrow" src="@/assets/svg/my/arrow.svg" alt="" />
     </div>
-    <div class="permiss-list">
+    <div class="permiss-list" @click="logout">
       <div class="permiss-img" style="color: #f75555">
         <img src="@/assets/svg/my/logout.svg" alt="" />
         Logout
@@ -94,12 +94,28 @@
       <!-- <img class="permiss-arrow" src="@/assets/svg/my/arrow.svg" alt="" /> -->
     </div>
   </div>
+<!--  <BottomDrawer :active="isShow" :placement="placement"></BottomDrawer>-->
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
 import { NSwitch } from "naive-ui";
-
+import BottomDrawer from "./components/bottomDrawer.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const placement = "right";
 let active = ref(null);
+let isShow:Ref<UnwrapRef<boolean>> = ref(false);
+const logout = ()=>{
+  isShow.value = true
+}
+const nextPage = (obj)=>{
+  switch (obj) {
+    case 1:
+      router.push('/language')
+      break;
+    default:
+  }
+}
 </script>
 <style lang="scss" scoped>
 .my-page {

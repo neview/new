@@ -18,6 +18,7 @@
         color="rgba(255, 152, 31, 1)"
         icon-placement="right"
         round
+        @click="nextPage"
       >
         <template #icon>
           <n-icon>
@@ -114,7 +115,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { NButton, NIcon, NTag } from "naive-ui";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const openSwitch = () => {};
+const nextPage = () => {
+  router.push('/node')
+};
 </script>
 <style lang="scss" scoped>
 .page-header {

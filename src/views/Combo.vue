@@ -96,10 +96,13 @@
       </div>
     </label>
   </div>
+  <div class="submit-butt" @click="">
+    Continue
+  </div>
 </template>
 <script setup lang="ts">
 import Header from "./components/header.vue";
-import { NCarousel, NRadio } from "naive-ui";
+import { NCarousel, NRadio,NButton } from "naive-ui";
 import { ref } from "vue";
 const titleValue = "套餐";
 let checkedValue = ref<number | null>(1);
@@ -184,5 +187,20 @@ const selectRadio = (obj) => {
   width: 100%;
   height: 240px;
   object-fit: cover;
+}
+.submit-butt{
+  border-radius: 1rem;
+  background-color: #335EF7;
+  box-shadow: 0.04rem 0.08rem 0.24rem 0px rgba(51, 94, 247, 0.25);
+  font-family: Urbanist;
+  font-size: 0.16rem;
+  font-style: normal;
+  font-weight: 700;
+  color: #FFF;
+  width: 90%;
+  margin: 0.3rem auto;
+  padding: 0.15rem 0;
+  text-align: center;
+  margin-bottom: 0.8rem;
 }
 </style>

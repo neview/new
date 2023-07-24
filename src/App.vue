@@ -34,9 +34,9 @@ const switchTheme = () => {
     <RouterView />
     <!-- <n-button class="suspend" @click="switchTheme">切换主题</n-button> -->
     <!-- </n-card> -->
-    <div style="position: fixed;bottom: 0;left: 0;width: 100%;">
+    <!-- <div style="position: fixed;bottom: 0;left: 0;width: 100%;">
       <BottomTabbar></BottomTabbar>
-    </div>
+    </div> -->
   </n-config-provider>
 </template>
 

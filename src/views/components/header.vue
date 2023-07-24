@@ -4,7 +4,7 @@
       <img src="@/assets/svg/combo/leftArrow.svg" alt="" />
       {{ title }}
     </div>
-    <img src="@/assets/svg/more.svg" alt="" />
+    <img src="@/assets/svg/more.svg" alt="" v-if="isImg" />
   </div>
 </template>
 <script setup lang="ts">
@@ -13,6 +13,7 @@ interface Props {
   title?: string;
   url?: string;
   url2?: string;
+  isImg?: boolean;
 }
 defineProps<Props>();
 </script>

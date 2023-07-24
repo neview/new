@@ -38,6 +38,11 @@ const router = createRouter({
       path: '/combo',
       name: 'Combo',
       component: () => import('../views/Combo.vue')
+    },
+    {
+      path: '/language',
+      name: 'Language',
+      component: () => import('../views/Language.vue')
     }
   ]
 })

@@ -63,6 +63,16 @@ const router = createRouter({
       path: '/edit',
       name: 'Edit',
       component: () => import('../views/Edit.vue')
+    },
+    {
+      path: '/ceshi',
+      name: 'Ceshi',
+      component: () => import('../views/Ceshi.vue')
+    },
+    {
+      path: '/loading',
+      name: 'Loading',
+      component: () => import('../views/components/loading.vue')
     }
   ]
 })

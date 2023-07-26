@@ -10,6 +10,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "@animxyz/vue3": "^0.6.7",
     "pinia": "^2.1.3",
     "unplugin-auto-import": "^0.16.6",
     "vue": "^3.3.4",

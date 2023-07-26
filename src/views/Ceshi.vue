@@ -15,6 +15,12 @@
   ></TextModal>
   <button @click="showDrawer">点击</button>
   <button @click="showDrawer2">点击2</button>
+  <button @click="showDrawer3">点击3</button>
+  <XyzTransitionGroup class="item-group" xyz="stagger-2 narrow-100%">
+    <div class="square" v-if="isShow3"></div>
+    <div class="square" v-if="isShow3"></div>
+    <div class="square" v-if="isShow3"></div>
+  </XyzTransitionGroup>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
@@ -25,11 +31,15 @@ import { useRouter } from "vue-router";
 const placement = "bottom";
 let isShow: Ref<UnwrapRef<boolean>> = ref(false);
 let isShow2: Ref<UnwrapRef<boolean>> = ref(false);
+let isShow3: Ref<UnwrapRef<boolean>> = ref(false);
 const showDrawer = () => {
   isShow.value = true;
 };
 const showDrawer2 = () => {
   isShow2.value = true;
+};
+const showDrawer3 = () => {
+  isShow3.value ? (isShow3.value = false) : (isShow3.value = true);
 };
 const hide = () => {
   isShow.value = false;
@@ -51,4 +61,19 @@ const buttCallBack = () => {
   isShow2.value = false;
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.item-group {
+  // width: 100%;
+  // display: flex;
+  // align-items: center;
+  --xyz-translate-y: -350%;
+  --xyz-ease: cubic-bezier(0.5, -1.5, 0.5, 1.5);
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background: #f8d7da;
+  margin: 10px;
+}
+</style>
